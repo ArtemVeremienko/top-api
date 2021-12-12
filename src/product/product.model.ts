@@ -13,6 +13,9 @@ class ProductCharacteristic {
 @Schema({ timestamps: true })
 export class ProductModel {
   @Prop()
+  _id: string;
+
+  @Prop()
   image: string;
 
   @Prop()
