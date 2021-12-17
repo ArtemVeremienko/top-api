@@ -6,7 +6,7 @@ import { Model } from 'mongoose';
 import { FindProductDto } from './dto/find-product.dto';
 import { ReviewModel } from 'src/review/review.model';
 
-type ProductModelAggregate = ProductModel & {
+type ProductModelAggregate = ProductModelDocument & {
   review: ReviewModel[];
   reviewCount: number;
   reviewAvg: number;
