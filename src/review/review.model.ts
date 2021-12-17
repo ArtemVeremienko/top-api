@@ -17,7 +17,7 @@ export class ReviewModel {
   rating: number;
 
   @Prop({ type: SchemaTypes.ObjectId, ref: ProductModel.name })
-  productId: ProductModel['_id'];
+  productId: string;
 }
 
 export type ReviewModelDocument = ReviewModel & Document;

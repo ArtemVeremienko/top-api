@@ -11,15 +11,15 @@ export class ReviewService {
     private reviewModel: Model<ReviewModelDocument>,
   ) {}
 
-  async create(dto: CreateReviewDto): Promise<ReviewModel> {
+  async create(dto: CreateReviewDto): Promise<ReviewModelDocument> {
     return this.reviewModel.create(dto);
   }
 
-  async delete(id: string): Promise<ReviewModel | null> {
+  async delete(id: string): Promise<ReviewModelDocument | null> {
     return this.reviewModel.findByIdAndDelete(id).exec();
   }
 
-  async findByProductId(productId: string): Promise<ReviewModel[]> {
+  async findByProductId(productId: string): Promise<ReviewModelDocument[]> {
     return this.reviewModel.find({ productId }).exec();
   }
 
